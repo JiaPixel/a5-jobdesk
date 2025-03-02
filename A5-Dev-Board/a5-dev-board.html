@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <!-- font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- diysi and tailwind cdn -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <!-- font awesome  -->
+      <script src="https://kit.fontawesome.com/a5a7cea519.js" crossorigin="anonymous"></script>
+
+    <!-- font style  -->
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif; 
+            }
+    </style>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d', 
+                 'bike-primary': '#E76F51',
+                 'bike-primary-bg': '#E76F51',
+               }
+             }
+          }
+        }
+      </script>
+
+
+</head>
+<body id="body" class="font-poppins bg-[#F4F7FF] min-h-screen">
+    <header class="py-3">
+        <nav class="md:w-10/12 py-3 px-4 bg-base-100 shadow mx-auto rounded-xl flex justify-between items-center">
+          <div class="logo flex gap-2">
+            <div class="">
+              <img class="w-6" src="assets/logo.png" alt="">
+            </div>
+            <h2>Dev<span class="font-bold">Board</span></h2>
+          </div>
+          <div class="additional flex gap-5">
+            <div class="flex items-center gap-2 py-2 px-3 bg-[#F4F7FF] rounded-full">
+              <img class="w-4 h-4" src="./assets/checkbox.png" alt="">
+              <span id="completed-task" class="font-bold">24</span>
+            </div>
+            <div id="theme-btn" class="flex cursor-pointer items-center gap-2 p-2 bg-[#F4F7FF] rounded-full">
+              <img id="btn-make-blue" class="w-6 h-6 active:animate-spin" src="./assets/theme-btn.png" alt="">
+            </div>
+          </div>
+        </nav>
+      </header>  
+
+    
+<!-- main section -->
+
+  <main class="md:w-10/12 grid grid-cols-12 mx-auto gap-5 ">
+    <section class="bg-base-100 py-3 col-span-full md:col-span-9 rounded-lg">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 border-b-2 border-dashed p-3 border-base-300">
+        <div class="flex items-center gap-3 bg-[#F4F7FF] p-4 rounded-xl">
+          <div class="img p-3 bg-base-100 rounded-full">
+            <img class="w-5 h-5" src="./assets/checkbox.png" alt="">
+          </div>
+          <div class="">
+            <p class="text-xs">Task Assiged</p>
+            <span id="total-taskcount" class="font-bold">6</span>
+          </div>
+        </div>
+        <div id="blog-btn" class="col-span-2 cursor-pointer flex justify-center items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-xl">
+          <div class="img p-1">
+            <img class="" src="./assets/board.png" alt="">
+          </div>
+          <div  id="question-page" class="text-black text-5xl text-lg">
+            Discover Something New Today!
+          </div>
+        </div>
+        <div class="flex items-center gap-3 bg-[#F4F7FF] p-4 rounded-xl">
+          <div class="img p-3 bg-base-100 rounded-full">
+            <img class="" src="./assets/calender.png" alt="">
+          </div>
+          <div id="today" class="text-sm"><br> Fri Feb 28 2025<br></div>
+        </div>
+      </div>
+
+      <div class="py-5 p-3 grid lg:grid-cols-3 gap-5">
+        <!-- card - 1  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Shop Ease</span>
+            <h2 class="card-title text-2xl font-bold">Fix Mobile Button Issue</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- card - 2  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Soft Pay</span>
+            <h2 class="card-title text-2xl font-bold">Add Pay Success Modal</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>25 March 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- card - 1  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Meta</span>
+            <h2 class="card-title text-2xl font-bold">Add new reaction 🤲</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>31 March 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- card - 1  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Programming Hero</span>
+            <h2 class="card-title text-2xl font-bold">Fix Video Loading Issue</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- card - 1  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Google LLC</span>
+            <h2 class="card-title text-2xl font-bold">Integrate AI search</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>01 April 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- card - 1  -->
+        <div class="card bg-[#F4F7FF] card-sm shadow-sm">
+          <div class="card-body">
+            <span class="bg-white p-2 badge">Polygon Tech</span>
+            <h2 class="card-title text-2xl font-bold">Review Ami Probashi Site</h2>
+            <p class="bg-white text-gray-400 p-2 rounded">
+              A card component has a figure, a body part, and inside body
+              there are title and actions parts
+            </p>
+            <div class="justify-between items-end card-actions">
+              <div class="deadline">
+                <p class="text-gray-500">Deadline</p>
+                <p>5 May 2025</p>
+              </div>
+              <button class="bg-blue-800 text-white p-5 btn btn-sm btn-primary">Completed</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-base-100 py-3 col-span-full md:col-span-3 rounded-lg">
+      <div class="border-dashed border-base-300 border-b-2 pb-3">
+        <div class="p-3 flex justify-center gap-3 items-center">
+          <img class="w-4 h-4" src="./assets/activity.png" alt="">
+          <h2>Activity Log</h2>
+        </div>
+        <button id="clear-btn" class="bg-blue-800 text-white p-5 btn btn-sm  btn btn-sm block mx-auto">
+          Clear History
+        </button>
+      </div>
+
+      <div id="history" class="py-5 px-3 space-y-5"><p class="bg-[#F4F7FF] p-3 rounded-xl text-sm"> </p></div>
+    </section>
+  </main>
+
+<footer>
+    
+
+</footer>
+<script src="js/event.js"></script>
+</body>
+</html>
